@@ -6,3 +6,5 @@
 
 ### We also have a counter for each category in the shop.
 
+### you can call "Inventory.display_items()" to get a list of all the items in the inventory
+
