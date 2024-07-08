@@ -10,6 +10,7 @@ class Inventory:
     def add_item(cls, item):
         cls.item_list.append(item)
 
+    
     @classmethod
     def display_items(cls):
         for item in cls.item_list:
@@ -18,7 +19,11 @@ class Inventory:
     def discount(self, discount):
         newprice = self.price - (self.price * (discount / 100))
         return newprice
-
+        
+    @classmethod
+    def remove_item(cls, item):
+        if item in cls.item_list:
+            cls.item_list.remove(item)
      
 
 class Mice(Inventory):
@@ -74,5 +79,7 @@ print(Keyboards.discount(keyboard1,20))
 print(keyboard1)
 
 print(Keyboards.keyboards_count)
+
+#Inventory.remove_item(mouse1)
 
 Inventory.display_items()
